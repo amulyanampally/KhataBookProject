@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Customer Form</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/customer/addCustomer}" method="post" th:object="${newCustomer}">
+<!--<div th:each="product:${newCustomer.products}">
+<div th:text="${product}"></div>-->
+</div>
+<input type="text" th:field="*{firstName}" placeholder="First Name">
+<input type="text" th:field="*{lastName}" placeholder="Last Name">
+<input type="text" th:field="*{mobile}" placeholder="Contact">
+
+<button type="submit">Submit</button>
+</form>
+</body>
+
+</html>
